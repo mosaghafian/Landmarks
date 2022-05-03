@@ -1,6 +1,7 @@
 import SwiftUI
 import MapKit
 
+//This is struct with the special type View
 struct MapView: View {
     // A coordinate propertyto MapView to update the preview provider to pass a fixed coordinate
     var coordinate: CLLocationCoordinate2D

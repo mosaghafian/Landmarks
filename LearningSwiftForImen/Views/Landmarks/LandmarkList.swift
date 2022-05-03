@@ -38,8 +38,12 @@ struct LandmarkList: View {
 }
 
 struct LandmarkList_Previews: PreviewProvider {
+    // the type is some View because the type is something that acts and behaves like a view
     static var previews: some View {
        LandmarkList()
             .environmentObject(ModelData())
     }
 }
+
+//Opaque Types: A function or method with an opaque return type hides its return value's type information. Instead of providing a concrete type as the function's return type, the return value is described in terms of the protocols it supports. Hiding type information is useful at boundaries between a module and code that calls into the module, because the underlying type of the return value can remain private. Unlike returning a value whose type is a protocol type, opaque types preserve type identity--the compiler has access to the type information, but clients of the module  don't
+// An opaque return type is like the reverse of a generic type. The code inside makeTrapezoid() can return any type it needs to, as long as that type conforms to the Shape protocol, like the calling code does for a generic function.
